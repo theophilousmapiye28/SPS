@@ -1,0 +1,889 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  
+}
+
+
+body {
+  margin: 0;
+ 
+  font-family: Helvetica, sans-serif;
+ 
+  width: 100%;
+}
+
+a {
+  color: #000;
+}
+
+
+
+.header {
+  background-color:black;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color:#000 ;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right:black ;
+  text-decoration: none;
+  color: #f4f4f4;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+ 
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: black;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  width: 50px;
+  color: #f2f2f2;
+}
+.logo a{
+  padding-top: 10px;
+  width: 200px;
+  padding-bottom: 10px;
+ 
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #fff;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #fff;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 350px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    margin-top: 30px;
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+ 
+
+}
+
+ /* ........................home ..........................*/
+
+
+
+ *, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: roboto, sans-serif;
+}
+
+.home {
+  height: 20vh;
+  position: relative;
+}
+video {
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  object-fit: cover;
+}
+.home-content {
+  position: relative;
+  padding-top: 180px;
+  color:  #130b38;
+  text-align: center;
+}
+h1 {padding-top: 100px;
+ color: darkblue;
+  font-family: Playfair Display, serif;
+  font-size: clamp(45px, 7vw, 130px);
+  line-height: 1.1;
+  font-weight: 300;
+}
+
+.home p { 
+color: darkblue;
+  font-size: clamp(25px, 4vw, 40px);
+  margin-top: 10px;
+}
+
+.home-content button {
+  display: block;
+  font-size: clamp(14px, 1.5vw, 18px);
+  border: 1px solid #130b38 ;
+  border-radius: 5px;
+  background: transparent;
+  color:  #130b38;
+
+  margin: 50px auto 0;
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+
+
+*, ::before, ::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body {
+font-family: roboto, sans-serif;
+}
+
+.home {
+height: 100vh;
+position: relative;
+}
+video {
+position: absolute;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.home-content {
+position: relative;
+padding-top: 150px;
+color: #000;
+text-align: center;
+}
+h1 {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: clamp(25px, 4vw, 40px);
+line-height: 1.1;
+font-weight: bold;
+}
+
+.home p {
+font-size: clamp(25px, 4vw, 40px);
+margin-top: 10px;
+color: #000;
+font-weight: bold;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.home-content button {
+display: block;
+font-size: clamp(14px, 1.5vw, 18px);
+border: 1px solid #130b38;
+border-radius: 5px;
+background: transparent;
+color: #130b38;
+margin: 50px auto 0;
+padding: 12px 20px;
+cursor: pointer;
+
+}
+
+
+.home-page{
+  background-image: linear-gradient(#fff,Grey);
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.info{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.info h3{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 30px;
+}
+
+.info p{
+  font-size: 20px;
+}
+
+.meta-tags img{
+  height: 10px;
+}
+
+.pic img{
+  height: 50vh;
+  width: 100%;
+}
+
+.btnshop{
+  background-color: white;
+  color: #000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 40px;
+  padding: 5px ;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+.btninfo{
+  background-color: #fff;
+  color: #000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 40px;
+  padding: 5px ;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.home-info{
+
+  padding-top: 10vh;
+  background-image: linear-gradient(white,Grey,#fff,GREY);
+ padding-bottom: 5vh;
+  
+}
+
+.home-info h3{
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 50px;
+}
+
+.home-info-content{
+  margin-left: 5vh;
+ padding: 10px;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  
+ 
+  
+  
+}
+
+.info-content{
+  border: 2px solid;
+  border-right: none;
+  border-bottom: none;
+  padding: 15px;
+}
+
+
+.info-content img{
+height: 20vh;
+width: 100%;
+}
+
+.info-content h4{
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-bottom: 10px;
+  font-size: 15px;
+  padding-left: 0; 
+}
+
+.info-content p{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-bottom: 10px;
+}
+
+.intouch {
+  
+  height: 50vh;
+
+}
+
+
+.intouch-content{
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-evenly;
+  height: 40vh;
+  flex-wrap: wrap;
+  
+  
+}
+.intouch-content h3{
+  color: white;
+  padding: 12px;
+}
+
+.touch{
+   margin: 5vh;
+  border: 1.7px solid gray;
+  border-radius: 5px;
+}
+
+
+
+
+/*........Questions .........*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ..........Brands............. */
+.Brands{
+  background-image: linear-gradient(white, Grey);
+  height: 100%;
+  padding-left:10px ;
+  
+}
+
+.Brands h1 {
+  text-align: center;
+
+}
+
+.Brands p{
+  text-align: center;
+  font-size: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Brands-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.row img{
+  height: 40px;
+  border-radius: 10px;
+}
+
+
+/* ........................ABOUT Us ..........................*/
+ 
+
+.about img{ 
+height: 100vh;
+width: 100%;
+}
+
+
+.About{
+ 
+ padding-top: 5vh;
+background-color: #f1f1f1;
+  color:#f4f4f4;
+  padding-bottom: 7vh;
+ 
+}
+.About h1{
+  font-size: 40px;
+  color: #000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-left: 10vh;
+  font-weight: 400;
+ 
+}
+
+.About-content{
+ 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+}
+
+.About-content h3{
+  padding-left: 10px;
+  font-size: 30px;
+ color: #000;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.About-content p{
+  padding-left: 10px;
+  color: #000;
+  font-size: 20px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.About-content img{
+  height: 50vh;
+  width: 100%;
+}
+.About button{
+  background: linear-gradient(#130b38,Grey);
+  color: #f1f1f1;
+  padding: 10px;
+  margin-left: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*...................... products............ */
+
+
+
+
+
+* {
+    box-sizing: border-box;
+
+  }
+  
+  body {
+    background-color: #f1f1f1;
+   
+    font-family: Arial;
+  }
+  
+  /* Center website */
+  .main {
+    margin-top: 8vh;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  h1 {
+    font-size: 50px;
+    word-break: break-all;
+    color: #000;
+  }
+
+.main h2{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+
+  
+  .row {
+    margin: 8px -16px;
+  }
+  
+
+  .row,
+  .row > .column {
+    padding: 8px;
+  }
+  
+  .column {
+    float: left;
+    width: 25%;
+  }
+  
+  /* Clear floats after rows */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Content */
+  .content {
+    background-color: white;
+    padding: 10px;
+    height: 30vh;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+  }
+  .content-inside img {
+   
+   padding: 10px;
+   height: 15vh;
+  }
+
+  .content-inside h3 {
+font-size: 15px;
+padding-left: 5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 900px) {
+    .column {
+      width: 100%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
+
+
+
+  /*................ Services .................*/
+
+
+  .container {
+   
+
+    position: relative;
+    max-width: 800px; 
+    margin: 0 auto; 
+  }
+  
+  .container .content {
+    position: absolute; 
+    bottom: 0; 
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); 
+    color: #f1f1f1;
+    width: 100%; 
+    padding: 20px; 
+  }
+/* ........................Services ..........................*/
+
+
+
+
+.jumbo{
+  padding-top: 10px;
+  background-color: #fff;
+  text-align: center;
+  width: 100%;
+  color: #000;
+  
+ }
+.jumbotron h1, h4 {
+
+  text-align: center;
+  color: #000;
+}
+/* Slideshow container */
+.slideshow-container {
+ border: 2px solid;
+  position: relative;
+  background: #f1f1f1f1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Slides */
+.mySlides {
+  height: 50vh;
+  padding-left: 25vh;
+  padding-right: 25vh;
+  background-color: #fff;
+  display: none;
+  padding: 80px;
+  text-align: center; 
+  margin-bottom: 8vh;
+  flex-wrap: wrap;
+ 
+
+}
+
+
+
+
+ 
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+
+.dot-container {
+  text-align: center;
+  padding: 20px;
+  background: #ddd;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+q {font-style: italic;}
+
+
+.author {color: cornflowerblue;}
+
+
+
+
+
+
+
+
+
+
+
+/* ......................contact................ */
+
+
+.contact{
+  padding-top: 5vh;
+background-image:linear-gradient(white,Grey) ;
+height: 210vh;
+background-size:100% ;
+margin-bottom: 5vh;
+}
+
+
+.contact h1{
+  text-decoration: underline navy ;
+  color: #000;
+ text-align: center;
+  padding-bottom: 10px;
+}
+.contact h3{
+ text-align: center;
+}
+
+
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+input[type=submit] {
+  background: linear-gradient(aqua,purple);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background: linear-gradient(aqua,purple);
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  margin-top: 10vh;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-bottom: 5vh;
+}
+
+
+
+
+.map {
+  background-image: linear-gradient(rgba(0, 128, 0, 0.527),white);
+  align-items: center;
+  justify-content: center;
+  }
+
+.map img{
+  height: 100vh;
+  width: 100%;
+}
+
+
+/* .............footer .................*/
+.footercontainter{
+  background:linear-gradient(gray,white) ;
+  height: 20vh;
+
+}
+
+.socialicons{
+  align-items: center;
+  justify-content: center;
+ padding: 10px;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.footerNav{
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.footerbottom{
+  background-color: #000;
+  height: 10vh;
+}
+
+.socialicons a{
+  padding: 20px;
+  height: 50px;
+}
+
+
+
+
+
+
